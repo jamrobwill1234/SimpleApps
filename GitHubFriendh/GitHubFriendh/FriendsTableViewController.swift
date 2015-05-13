@@ -83,10 +83,12 @@ class FriendsTableViewController: UITableViewController {
                     
                     println(friendInfo)
                 
+                    if friendInfo["name"] != nil {
+                    
                 friends.insert(friendInfo, atIndex: 0)
                     
                 tableView.reloadData() //refreshes your table view controller
-                    
+                    }
                     
             }
             }
@@ -128,9 +130,13 @@ class FriendsTableViewController: UITableViewController {
 
         cell.textLabel?.text = friends[indexPath.row]["name"] as? String
         
-        [cell.imageView setImageWithURL:[NSURL URLWithString:@"https://avatars.githubusercontent.com/u/11762656?v=3"]
-            
-            placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+        let avatarURL = NSURL(string: friends[indexPath.row]["avatar_url"]! as! String)
+        
+        let imageData = NSData(contentsOfURL: avatarURL!)
+        
+        let image = UIImage(data: imageData!)
+        
+        cell.imageView!.image = image
         
         return cell
             

@@ -13,6 +13,10 @@
 		41D3DE2E1B02393900C6C089 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D3DE2C1B02393900C6C089 /* LaunchScreen.xib */; };
 		41D3DE3A1B02393900C6C089 /* GitHubFriendhTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE391B02393900C6C089 /* GitHubFriendhTests.swift */; };
 		41D3DE441B02402500C6C089 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE431B02402500C6C089 /* FriendsTableViewController.swift */; };
+		41D3DE481B038F1A00C6C089 /* ReopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE471B038F1A00C6C089 /* ReopTableViewCell.swift */; };
+		41D3DE4C1B038F4400C6C089 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE4B1B038F4400C6C089 /* FriendsTableViewCell.swift */; };
+		41D3DE4E1B0391A000C6C089 /* ReposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE4D1B0391A000C6C089 /* ReposTableViewController.swift */; };
+		41D3DE501B0397B300C6C089 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE4F1B0397B300C6C089 /* GithubRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		41D3DE381B02393900C6C089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41D3DE391B02393900C6C089 /* GitHubFriendhTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubFriendhTests.swift; sourceTree = "<group>"; };
 		41D3DE431B02402500C6C089 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		41D3DE471B038F1A00C6C089 /* ReopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReopTableViewCell.swift; sourceTree = "<group>"; };
+		41D3DE4B1B038F4400C6C089 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		41D3DE4D1B0391A000C6C089 /* ReposTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposTableViewController.swift; sourceTree = "<group>"; };
+		41D3DE4F1B0397B300C6C089 /* GithubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +85,13 @@
 		41D3DE201B02393900C6C089 /* GitHubFriendh */ = {
 			isa = PBXGroup;
 			children = (
-				41D3DE431B02402500C6C089 /* FriendsTableViewController.swift */,
 				41D3DE271B02393900C6C089 /* Main.storyboard */,
+				41D3DE431B02402500C6C089 /* FriendsTableViewController.swift */,
+				41D3DE4B1B038F4400C6C089 /* FriendsTableViewCell.swift */,
+				41D3DE471B038F1A00C6C089 /* ReopTableViewCell.swift */,
+				41D3DE4D1B0391A000C6C089 /* ReposTableViewController.swift */,
 				41D3DE211B02393900C6C089 /* Supporting Files */,
+				41D3DE4F1B0397B300C6C089 /* GithubRequest.swift */,
 			);
 			path = GitHubFriendh;
 			sourceTree = "<group>";
@@ -212,8 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D3DE501B0397B300C6C089 /* GithubRequest.swift in Sources */,
 				41D3DE441B02402500C6C089 /* FriendsTableViewController.swift in Sources */,
+				41D3DE4C1B038F4400C6C089 /* FriendsTableViewCell.swift in Sources */,
 				41D3DE241B02393900C6C089 /* AppDelegate.swift in Sources */,
+				41D3DE481B038F1A00C6C089 /* ReopTableViewCell.swift in Sources */,
+				41D3DE4E1B0391A000C6C089 /* ReposTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +425,7 @@
 				41D3DE3F1B02393900C6C089 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41D3DE401B02393900C6C089 /* Build configuration list for PBXNativeTarget "GitHubFriendhTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +434,7 @@
 				41D3DE421B02393900C6C089 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
