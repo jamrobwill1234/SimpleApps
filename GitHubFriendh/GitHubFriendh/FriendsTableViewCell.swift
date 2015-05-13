@@ -12,14 +12,7 @@ class FriendsTableViewCell: UITableViewCell {
 
     
     
-    @IBOutlet weak var avatarImageView: UIImageView!
-    
-    @IBOutlet weak var friendNameLabel: UILabel!
-    
-    @IBOutlet weak var reposButton: UIButton!
-    
-    @IBOutlet weak var gistsButton: UIButton!
-    
+        
     var friendInfo: [String: AnyObject?]! {
         
         didSet {

@@ -69,7 +69,7 @@ class FriendsTableViewController: UITableViewController {
     @IBAction func addFriend(sender: AnyObject) {
         
             
-    let endpoint = "https://api.github.com/users/\(friendNameField.text)?client_id=18c2e67eaf44f4a60b76&client_secret=5528dd41089fd0a5de62e7927b849075b65463a0"
+    let endpoint = "https://api.github.com/users/\(friendNameField.text)
         
         println(endpoint)
         

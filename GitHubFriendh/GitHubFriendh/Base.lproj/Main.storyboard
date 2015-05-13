@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Friends-->
         <scene sceneID="1tE-1X-xUF">
             <objects>
                 <tableViewController id="J5X-RB-FfZ" customClass="FriendsTableViewController" customModule="GitHubFriendh" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,8 +66,8 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-Z5-XOP">
-                                            <rect key="frame" x="460" y="48" width="46" height="30"/>
-                                            <state key="normal" title="Button">
+                                            <rect key="frame" x="460" y="48" width="30" height="30"/>
+                                            <state key="normal" title="Gifs">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
@@ -84,7 +84,7 @@
                             <outlet property="delegate" destination="J5X-RB-FfZ" id="2B2-O2-TXc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="bXN-ii-8ZW"/>
+                    <navigationItem key="navigationItem" title="My Friends" id="bXN-ii-8ZW"/>
                     <connections>
                         <outlet property="friendNameField" destination="1jV-6G-wGZ" id="FWf-Sw-6uw"/>
                     </connections>
@@ -126,6 +126,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zp7-6m-l4n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.19605768898146203" green="0.85661300510000005" blue="0.62451121618070771" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="J5X-RB-FfZ" kind="relationship" relationship="rootViewController" id="NCw-7x-qfk"/>
