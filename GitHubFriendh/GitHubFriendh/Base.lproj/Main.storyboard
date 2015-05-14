@@ -12,41 +12,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="q13-Zu-Tyk">
-                            <rect key="frame" x="0.0" y="64" width="600" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1jV-6G-wGZ">
-                                    <rect key="frame" x="10" y="10" width="470" height="40"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEW-ZK-7av">
-                                    <rect key="frame" x="490" y="10" width="100" height="40"/>
-                                    <color key="backgroundColor" red="1" green="0.129867968" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="D63-zV-nva"/>
-                                    </constraints>
-                                    <state key="normal" title="Add Friend">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="addFriend:" destination="J5X-RB-FfZ" eventType="touchUpInside" id="aen-Xt-iff"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="pEW-ZK-7av" firstAttribute="top" secondItem="q13-Zu-Tyk" secondAttribute="top" constant="10" id="52J-7x-B4W"/>
-                                <constraint firstItem="1jV-6G-wGZ" firstAttribute="top" secondItem="q13-Zu-Tyk" secondAttribute="top" constant="10" id="9Te-J6-yDN"/>
-                                <constraint firstAttribute="bottom" secondItem="1jV-6G-wGZ" secondAttribute="bottom" constant="10" id="Bqu-pZ-uhb"/>
-                                <constraint firstItem="pEW-ZK-7av" firstAttribute="leading" secondItem="1jV-6G-wGZ" secondAttribute="trailing" constant="10" id="DKV-BJ-V06"/>
-                                <constraint firstAttribute="bottom" secondItem="pEW-ZK-7av" secondAttribute="bottom" constant="10" id="Ft5-lJ-1bk"/>
-                                <constraint firstItem="1jV-6G-wGZ" firstAttribute="leading" secondItem="q13-Zu-Tyk" secondAttribute="leading" constant="10" id="kRA-Ue-ycv"/>
-                                <constraint firstAttribute="trailing" secondItem="pEW-ZK-7av" secondAttribute="trailing" constant="10" id="sYf-la-pRX"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="129" id="HlO-RE-Umd" customClass="ProfileTableViewCell" customModule="GitHubFriendh" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -62,12 +27,12 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="IXB-32-BfC" kind="show" id="TDM-aG-0ko"/>
+                                                <segue destination="IXB-32-BfC" kind="show" identifier="reposSegue" id="TDM-aG-0ko"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-Z5-XOP">
-                                            <rect key="frame" x="460" y="48" width="30" height="30"/>
-                                            <state key="normal" title="Gifs">
+                                            <rect key="frame" x="460" y="48" width="36" height="30"/>
+                                            <state key="normal" title="Gists">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
@@ -84,14 +49,47 @@
                             <outlet property="delegate" destination="J5X-RB-FfZ" id="2B2-O2-TXc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Friends" id="bXN-ii-8ZW"/>
-                    <connections>
-                        <outlet property="friendNameField" destination="1jV-6G-wGZ" id="FWf-Sw-6uw"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="My Friends" id="bXN-ii-8ZW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OrP-dO-Gl4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="yOf-7K-XTw" kind="presentation" identifier="addSegue" id="Wfi-NH-eoz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGh-PV-xAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1478" y="-375"/>
+        </scene>
+        <!--Add Friend View Controller-->
+        <scene sceneID="EMM-6t-EUx">
+            <objects>
+                <viewController id="yOf-7K-XTw" customClass="AddFriendViewController" customModule="GitHubFriendh" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WnB-Ld-Ozy"/>
+                        <viewControllerLayoutGuide type="bottom" id="4lF-qb-Ov2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yyV-eC-XIC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hia-eX-hXp">
+                                <rect key="frame" x="171" y="47" width="52" height="44"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="yOf-7K-XTw" eventType="touchUpInside" id="B38-Mp-r4Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TU7-1C-cex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1478" y="339"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Q3P-M5-gwK">

@@ -17,6 +17,7 @@
 		41D3DE4C1B038F4400C6C089 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE4B1B038F4400C6C089 /* FriendsTableViewCell.swift */; };
 		41D3DE4E1B0391A000C6C089 /* ReposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE4D1B0391A000C6C089 /* ReposTableViewController.swift */; };
 		41D3DE501B0397B300C6C089 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE4F1B0397B300C6C089 /* GithubRequest.swift */; };
+		41D3DE521B03AC3C00C6C089 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3DE511B03AC3C00C6C089 /* AddFriendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		41D3DE4B1B038F4400C6C089 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		41D3DE4D1B0391A000C6C089 /* ReposTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposTableViewController.swift; sourceTree = "<group>"; };
 		41D3DE4F1B0397B300C6C089 /* GithubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		41D3DE511B03AC3C00C6C089 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +87,14 @@
 		41D3DE201B02393900C6C089 /* GitHubFriendh */ = {
 			isa = PBXGroup;
 			children = (
-				41D3DE271B02393900C6C089 /* Main.storyboard */,
+				41D3DE4F1B0397B300C6C089 /* GithubRequest.swift */,
 				41D3DE431B02402500C6C089 /* FriendsTableViewController.swift */,
 				41D3DE4B1B038F4400C6C089 /* FriendsTableViewCell.swift */,
-				41D3DE471B038F1A00C6C089 /* ReopTableViewCell.swift */,
 				41D3DE4D1B0391A000C6C089 /* ReposTableViewController.swift */,
+				41D3DE511B03AC3C00C6C089 /* AddFriendViewController.swift */,
+				41D3DE471B038F1A00C6C089 /* ReopTableViewCell.swift */,
+				41D3DE271B02393900C6C089 /* Main.storyboard */,
 				41D3DE211B02393900C6C089 /* Supporting Files */,
-				41D3DE4F1B0397B300C6C089 /* GithubRequest.swift */,
 			);
 			path = GitHubFriendh;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D3DE501B0397B300C6C089 /* GithubRequest.swift in Sources */,
+				41D3DE521B03AC3C00C6C089 /* AddFriendViewController.swift in Sources */,
 				41D3DE441B02402500C6C089 /* FriendsTableViewController.swift in Sources */,
 				41D3DE4C1B038F4400C6C089 /* FriendsTableViewCell.swift in Sources */,
 				41D3DE241B02393900C6C089 /* AppDelegate.swift in Sources */,
