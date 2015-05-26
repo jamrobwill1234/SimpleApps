@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+   // this sets the subclass of the class ViewController as a UIView controller
    
     
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     
     var spaces: [[Player?]] = [
-    
+    // not sure what this means???
     [nil,nil,nil],
     [nil,nil,nil],
     [nil,nil,nil],
@@ -38,15 +38,15 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(sender: TButton) {
         
         if sender.player != nil { return }
-        
+        // not sure what this means but this is the action for the circles to be pressed on the board
         
     
     
         sender.player = currentPlayer
         sender.setNeedsDisplay()
-        
+        // this means that whats in your view has to be redrawn
         spaces[sender.row][sender.col] = currentPlayer
-        
+        // not sure what this means?????
         println(spaces)
         
         checkForWinner()
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
 //       }
         
         currentPlayer = (currentPlayer == .One) ? .Two : .One
-    }
+    } //  this means if the current player number one is not number two then it is number one  switches the current players from one to two
     
     var possibilities = [
         [0,0,0,1,0,2],
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         [0,2,1,2,2,2],
         [0,0,1,1,2,2],
         [0,2,1,1,2,0],
-    ]
+    ] // this is an array of all the possiblites of a point ??
     
     func checkForWinner() {
         
@@ -78,13 +78,13 @@ class ViewController: UIViewController {
         let firstSpot = spaces[possibility[0]][possibility[1]]
         let secondSpot = spaces[possibility[2]][possibility[3]]
         let thirdSpot = spaces[possibility[4]][possibility[5]]
-
+// This is a loop through the array to select the possiblities??
         
         if firstSpot == secondSpot && secondSpot == thirdSpot {
             
             if let winner = firstSpot {
             
-            
+          // this function allows you to select the three dots that will win the game
             println("player\(winner.hashValue + 1) wins")
                 
             }
