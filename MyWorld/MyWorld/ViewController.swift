@@ -62,7 +62,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                                 let coordinate = CLLocationCoordinate2DMake(lat, lng)
                                 
                                 let annotation = MyAnnotation()
-                    
+                                
                                 annotation.title = venue["name"] as? String
                                 annotation.venueIndex = index
                                 
@@ -77,7 +77,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     }
                     
                 }
-            
+                
             })
             
             lManager.stopUpdatingLocation()
@@ -123,7 +123,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 
             })
             
-        
+            
         }
         
     }
@@ -150,20 +150,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     func showMoreInfo(sender: UIButton) {
         
         
-       var detailVC = UIViewController()
+        var detailVC = UIViewController()
         
-       var venue = allVenues[sender.tag]
-
+        var venue = allVenues[sender.tag]
+        
         detailVC.view.backgroundColor = UIColor.whiteColor()
         
-       detailVC.navigationItem.title = venue["name"] as? String
+        detailVC.navigationItem.title = venue["name"] as? String
         var box = UIView(frame: CGRectMake(20, 20, 100, 100)
-        
-        box.backgroundColor = UIColor.blueColor()
             
-       self.navigationController?.pushViewController(detailVC, animated: true)
+            box.backgroundColor = UIColor.blueColor()
+            
+            self.navigationController?.pushViewController(detailVC, animated: true)
         
-    
+        
         
     }
 }
