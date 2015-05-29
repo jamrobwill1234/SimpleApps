@@ -10,12 +10,24 @@ import UIKit
 
 class TrackTableViewCell: UITableViewCell {
     
-    var trackInfo: [String:AnyObject]!
+    var trackInfo: [String:AnyObject]! {
+        
+        didSet {
+            trackNameLabel.text = trackInfo["trackName"] as? String 
+        }
+    
+    
+    
+    
+    }
+    
+    
 
     @IBOutlet weak var trackNameLabel: UILabel!
     
     @IBOutlet weak var toggleSong: UIButton!
-    
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

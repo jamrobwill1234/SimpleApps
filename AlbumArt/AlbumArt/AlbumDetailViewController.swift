@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AFNetworking
 
-class AlbumDetailViewController: UIViewController {
+class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var albumInfo: [String:AnyObject]!
     
@@ -27,45 +28,48 @@ class AlbumDetailViewController: UIViewController {
         
         artistNameLabel.text = albumInfo["artistName"] as? String
         
-        "https://itunes.apple.come/lookup
         
-        let albumID = albumInfo["collectionID"] as? Int {
+        if let albumID = albumInfo["collectionID"] as? Int {
         
-        var requestManager = AFHTTPRequestOperationManager()
-        
-        requestManager.GET(itunesLookupAPI + "?entity=song&id=", parameters: nil, success: { (request, data) -> Void in
+            var requestManager = AFHTTPRequestOperationManager()
             
-            let info = data as! [String:AnyObject]
-            
-            self.albums = info["results"] as! [[String:AnyObject]]
-            
-            self.collectionView?.reloadData()
-            
-            }) { (request, error) -> Void in
+            requestManager.GET(itunesLookupAPI + "?entity=song&id=", parameters: nil, success: { (request, data) -> Void in
                 
-                println(error)
+                let info = data as! [String:AnyObject]
+                
+                self.tracks = info["results"] as! [[String:AnyObject]]
+                self.tracks.removeAtIndex(0)
+                self.trackstableview.reloadData()
+                
+                //self.collectionView?.reloadData()
+                
+                }) { (request, error) -> Void in
+                    
+                    println(error)
+            }
         }
-    }
-    }
     
         trackstableview.dataSource = self
         trackstableview.delegate = self
         
         println()
     }
+
+    var tracks: [[String:AnyObject]] = []
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tracks.count
     }
-    func tableView(tableView: UITableView, cellForRowAtIndexPAth indexPAth: NSIndexPath) -> UITableViewCell {
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPAth: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("trackCell", forIndexPath: indexPAth) as! TrackTableViewCell
         
         cell.trackInfo = tracks[indexPAth.row]
         
+        return cell
+        
     }
-    }
-
 
 }
 
