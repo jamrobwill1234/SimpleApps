@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Favorites" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4A-Cj-rHT">
+                                <rect key="frame" x="470" y="28" width="120" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4xe-0P-Jyb"/>
+                                    <constraint firstAttribute="width" constant="120" id="6zE-Qf-aiG"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addFavorite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuf-lh-hEF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DX-Bi-w30">
+                                <rect key="frame" x="10" y="28" width="450" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kTh-wU-Uze"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YEr-0A-wyb">
+                                <rect key="frame" x="0.0" y="78" width="600" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="scq-kN-eni">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="scq-kN-eni" id="wIh-rF-Oz1">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YEr-0A-wyb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7L7-D2-yhv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YEr-0A-wyb" secondAttribute="bottom" id="Cqx-WI-qAv"/>
+                            <constraint firstItem="A4A-Cj-rHT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Qak-Da-Ne1"/>
+                            <constraint firstAttribute="trailing" secondItem="A4A-Cj-rHT" secondAttribute="trailing" constant="10" id="Rk2-QL-VRc"/>
+                            <constraint firstItem="6DX-Bi-w30" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="cbr-GH-Yf9"/>
+                            <constraint firstItem="A4A-Cj-rHT" firstAttribute="leading" secondItem="6DX-Bi-w30" secondAttribute="trailing" constant="10" id="g6N-U5-lA3"/>
+                            <constraint firstItem="YEr-0A-wyb" firstAttribute="top" secondItem="6DX-Bi-w30" secondAttribute="bottom" constant="10" id="idE-8g-Mcc"/>
+                            <constraint firstItem="6DX-Bi-w30" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="jxH-7f-OMA"/>
+                            <constraint firstAttribute="trailing" secondItem="YEr-0A-wyb" secondAttribute="trailing" id="sFk-Zv-AWq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="YEr-0A-wyb" id="pdZ-4b-D3i"/>
+                        <outlet property="myFavorite" destination="6DX-Bi-w30" id="KF8-wR-sUU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="377"/>
+        </scene>
+    </scenes>
+</document>
