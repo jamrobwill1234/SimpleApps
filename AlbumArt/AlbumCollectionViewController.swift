@@ -10,12 +10,13 @@ import UIKit
 import AFNetworking
 
 
+
 let reuseIdentifier = "albumCell"
 
 let itunesSearchAPI = "https://itunes.apple.com/search"
-let itunesLookupAPI = "https://itunes.apple.come/lookup"
+let itunesLookupAPI = "https://itunes.apple.com/lookup"
 
-class AlbumCollectionViewController: UICollectionViewController {
+class AlbumCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var albums: [[String:AnyObject]] = []
     
@@ -30,7 +31,7 @@ class AlbumCollectionViewController: UICollectionViewController {
         
         var requestManager = AFHTTPRequestOperationManager()
         
-        requestManager.GET(itunesSearchAPI + "?entity=album&term=DaftPunk", parameters: nil, success: { (request, data) -> Void in
+        requestManager.GET(itunesSearchAPI + "?entity=album&term=kygo", parameters: nil, success: { (request, data) -> Void in
             
             let info = data as! [String:AnyObject]
             
@@ -43,30 +44,21 @@ class AlbumCollectionViewController: UICollectionViewController {
                 println(error)
         }
         
-        // Do any additional setup after loading the view.
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+    
+        
+        let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "sectionHeader", forIndexPath: indexPath) as! UICollectionReusableView
+        
+        return header
     }
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
-    // MARK: UICollectionViewDataSource
-    
-    //    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-    //        //#warning Incomplete method implementation -- Return the number of sections
-    //        return 0
-    //    }
+
+
+
+
     
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

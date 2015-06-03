@@ -101,15 +101,15 @@
 		41A782751B189D000081A84C /* AlbumArt */ = {
 			isa = PBXGroup;
 			children = (
-				41A782781B189D000081A84C /* AppDelegate.swift */,
+				416B6B691B18E80F0002C238 /* TrackTableViewCell.swift */,
 				41A7829A1B189EC00081A84C /* AlbumCollectionViewCell.swift */,
 				41A782981B189EB10081A84C /* AlbumCollectionViewController.swift */,
 				41A7827A1B189D000081A84C /* AlbumDetailViewController.swift */,
 				41A7827C1B189D000081A84C /* Main.storyboard */,
 				41A782761B189D000081A84C /* Supporting Files */,
 				41A7829C1B18A2790081A84C /* PodFile */,
+				41A782781B189D000081A84C /* AppDelegate.swift */,
 				416B6B661B18A8AF0002C238 /* AlbumArt-Bridging-Header.h */,
-				416B6B691B18E80F0002C238 /* TrackTableViewCell.swift */,
 			);
 			path = AlbumArt;
 			sourceTree = "<group>";

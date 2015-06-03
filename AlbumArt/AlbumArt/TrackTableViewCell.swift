@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol TrackTableViewCellDelegate {
+    
+    func playSongWithURL(url:String)
+    
+}
+
 class TrackTableViewCell: UITableViewCell {
+    
+    var delegate: TrackTableViewCellDelegate?
     
     var trackInfo: [String:AnyObject]! {
         
@@ -25,9 +33,14 @@ class TrackTableViewCell: UITableViewCell {
 
     @IBOutlet weak var trackNameLabel: UILabel!
     
-    @IBOutlet weak var toggleSong: UIButton!
-
-
+    @IBAction func toggleSong(sender: AnyObject) {
+        
+        if let url = trackInfo["previewUrl"] as? String {
+    
+            delegate?.playSongWithURL(url)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

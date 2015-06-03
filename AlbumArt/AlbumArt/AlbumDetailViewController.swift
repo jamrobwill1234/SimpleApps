@@ -8,8 +8,9 @@
 
 import UIKit
 import AFNetworking
+import AVFoundation
 
-class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TrackTableViewCellDelegate {
     
     var albumInfo: [String:AnyObject]!
     
@@ -21,6 +22,9 @@ class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableV
 
     @IBOutlet weak var trackstableview: UITableView!
     
+    
+    var player: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,11 +33,11 @@ class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableV
         artistNameLabel.text = albumInfo["artistName"] as? String
         
         
-        if let albumID = albumInfo["collectionID"] as? Int {
+        if let albumID = albumInfo["collectionId"] as? Int {
         
             var requestManager = AFHTTPRequestOperationManager()
             
-            requestManager.GET(itunesLookupAPI + "?entity=song&id=", parameters: nil, success: { (request, data) -> Void in
+            requestManager.GET(itunesLookupAPI + "?entity=song&id=\(albumID)", parameters: nil, success: { (request, data) -> Void in
                 
                 let info = data as! [String:AnyObject]
                 
@@ -66,10 +70,35 @@ class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCellWithIdentifier("trackCell", forIndexPath: indexPAth) as! TrackTableViewCell
         
         cell.trackInfo = tracks[indexPAth.row]
+        cell.delegate = self
         
         return cell
         
     }
+    func playSongWithURL(url: String) {
+       
+        player?.stop()
+        
+        if let url = NSURL(string: url) {
+            
+            if let trackData = NSData(contentsOfURL: url) {
+                
+                
+            
+                player = AVAudioPlayer(data: trackData, error: nil)
+                player?.play()
+            }
+        }
+    }
+ 
+    override func viewWillDisappear(animated: Bool) {
+        player?.stop()
+    }
+
 
 }
+
+
+
+
 
