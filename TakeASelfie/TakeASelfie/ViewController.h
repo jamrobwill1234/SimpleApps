@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property(nonatomic) UIImage * original; 
+@property (weak, nonatomic) IBOutlet UIImageView *unfilteredImageView;
 
 @end
 
