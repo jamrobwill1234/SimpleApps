@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		417B0CF11B2771AB00779298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B0CF01B2771AB00779298 /* AppDelegate.swift */; };
+		417B0CF31B2771AB00779298 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 417B0CF21B2771AB00779298 /* GameScene.sks */; };
+		417B0CF51B2771AB00779298 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B0CF41B2771AB00779298 /* GameScene.swift */; };
+		417B0CF71B2771AB00779298 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B0CF61B2771AB00779298 /* GameViewController.swift */; };
+		417B0CFA1B2771AB00779298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417B0CF81B2771AB00779298 /* Main.storyboard */; };
+		417B0CFC1B2771AB00779298 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417B0CFB1B2771AB00779298 /* Images.xcassets */; };
+		417B0CFF1B2771AB00779298 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417B0CFD1B2771AB00779298 /* LaunchScreen.xib */; };
+		417B0D0B1B2771AB00779298 /* SAMortalKombatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B0D0A1B2771AB00779298 /* SAMortalKombatTests.swift */; };
+		417B0D151B2771C700779298 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B0D141B2771C700779298 /* Connector.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		417B0D051B2771AB00779298 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 417B0CE31B2771AB00779298 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 417B0CEA1B2771AB00779298;
+			remoteInfo = SAMortalKombat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		417B0CEB1B2771AB00779298 /* SAMortalKombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAMortalKombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		417B0CEF1B2771AB00779298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		417B0CF01B2771AB00779298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		417B0CF21B2771AB00779298 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		417B0CF41B2771AB00779298 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		417B0CF61B2771AB00779298 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		417B0CF91B2771AB00779298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		417B0CFB1B2771AB00779298 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		417B0CFE1B2771AB00779298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		417B0D041B2771AB00779298 /* SAMortalKombatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAMortalKombatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		417B0D091B2771AB00779298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		417B0D0A1B2771AB00779298 /* SAMortalKombatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAMortalKombatTests.swift; sourceTree = "<group>"; };
+		417B0D141B2771C700779298 /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		417B0CE81B2771AB00779298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417B0D011B2771AB00779298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		417B0CE21B2771AB00779298 = {
+			isa = PBXGroup;
+			children = (
+				417B0CED1B2771AB00779298 /* SAMortalKombat */,
+				417B0D071B2771AB00779298 /* SAMortalKombatTests */,
+				417B0CEC1B2771AB00779298 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		417B0CEC1B2771AB00779298 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				417B0CEB1B2771AB00779298 /* SAMortalKombat.app */,
+				417B0D041B2771AB00779298 /* SAMortalKombatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		417B0CED1B2771AB00779298 /* SAMortalKombat */ = {
+			isa = PBXGroup;
+			children = (
+				417B0CF01B2771AB00779298 /* AppDelegate.swift */,
+				417B0CF21B2771AB00779298 /* GameScene.sks */,
+				417B0CF41B2771AB00779298 /* GameScene.swift */,
+				417B0CF61B2771AB00779298 /* GameViewController.swift */,
+				417B0CF81B2771AB00779298 /* Main.storyboard */,
+				417B0CFB1B2771AB00779298 /* Images.xcassets */,
+				417B0CFD1B2771AB00779298 /* LaunchScreen.xib */,
+				417B0CEE1B2771AB00779298 /* Supporting Files */,
+				417B0D141B2771C700779298 /* Connector.swift */,
+			);
+			path = SAMortalKombat;
+			sourceTree = "<group>";
+		};
+		417B0CEE1B2771AB00779298 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				417B0CEF1B2771AB00779298 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		417B0D071B2771AB00779298 /* SAMortalKombatTests */ = {
+			isa = PBXGroup;
+			children = (
+				417B0D0A1B2771AB00779298 /* SAMortalKombatTests.swift */,
+				417B0D081B2771AB00779298 /* Supporting Files */,
+			);
+			path = SAMortalKombatTests;
+			sourceTree = "<group>";
+		};
+		417B0D081B2771AB00779298 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				417B0D091B2771AB00779298 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		417B0CEA1B2771AB00779298 /* SAMortalKombat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 417B0D0E1B2771AB00779298 /* Build configuration list for PBXNativeTarget "SAMortalKombat" */;
+			buildPhases = (
+				417B0CE71B2771AB00779298 /* Sources */,
+				417B0CE81B2771AB00779298 /* Frameworks */,
+				417B0CE91B2771AB00779298 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SAMortalKombat;
+			productName = SAMortalKombat;
+			productReference = 417B0CEB1B2771AB00779298 /* SAMortalKombat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		417B0D031B2771AB00779298 /* SAMortalKombatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 417B0D111B2771AB00779298 /* Build configuration list for PBXNativeTarget "SAMortalKombatTests" */;
+			buildPhases = (
+				417B0D001B2771AB00779298 /* Sources */,
+				417B0D011B2771AB00779298 /* Frameworks */,
+				417B0D021B2771AB00779298 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				417B0D061B2771AB00779298 /* PBXTargetDependency */,
+			);
+			name = SAMortalKombatTests;
+			productName = SAMortalKombatTests;
+			productReference = 417B0D041B2771AB00779298 /* SAMortalKombatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		417B0CE31B2771AB00779298 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "James Williams";
+				TargetAttributes = {
+					417B0CEA1B2771AB00779298 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					417B0D031B2771AB00779298 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 417B0CEA1B2771AB00779298;
+					};
+				};
+			};
+			buildConfigurationList = 417B0CE61B2771AB00779298 /* Build configuration list for PBXProject "SAMortalKombat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 417B0CE21B2771AB00779298;
+			productRefGroup = 417B0CEC1B2771AB00779298 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				417B0CEA1B2771AB00779298 /* SAMortalKombat */,
+				417B0D031B2771AB00779298 /* SAMortalKombatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		417B0CE91B2771AB00779298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417B0CFF1B2771AB00779298 /* LaunchScreen.xib in Resources */,
+				417B0CFC1B2771AB00779298 /* Images.xcassets in Resources */,
+				417B0CF31B2771AB00779298 /* GameScene.sks in Resources */,
+				417B0CFA1B2771AB00779298 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417B0D021B2771AB00779298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		417B0CE71B2771AB00779298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417B0CF51B2771AB00779298 /* GameScene.swift in Sources */,
+				417B0D151B2771C700779298 /* Connector.swift in Sources */,
+				417B0CF71B2771AB00779298 /* GameViewController.swift in Sources */,
+				417B0CF11B2771AB00779298 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417B0D001B2771AB00779298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417B0D0B1B2771AB00779298 /* SAMortalKombatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		417B0D061B2771AB00779298 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 417B0CEA1B2771AB00779298 /* SAMortalKombat */;
+			targetProxy = 417B0D051B2771AB00779298 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		417B0CF81B2771AB00779298 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				417B0CF91B2771AB00779298 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		417B0CFD1B2771AB00779298 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				417B0CFE1B2771AB00779298 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		417B0D0C1B2771AB00779298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		417B0D0D1B2771AB00779298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		417B0D0F1B2771AB00779298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SAMortalKombat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		417B0D101B2771AB00779298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SAMortalKombat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		417B0D121B2771AB00779298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SAMortalKombatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SAMortalKombat.app/SAMortalKombat";
+			};
+			name = Debug;
+		};
+		417B0D131B2771AB00779298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SAMortalKombatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SAMortalKombat.app/SAMortalKombat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		417B0CE61B2771AB00779298 /* Build configuration list for PBXProject "SAMortalKombat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417B0D0C1B2771AB00779298 /* Debug */,
+				417B0D0D1B2771AB00779298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		417B0D0E1B2771AB00779298 /* Build configuration list for PBXNativeTarget "SAMortalKombat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417B0D0F1B2771AB00779298 /* Debug */,
+				417B0D101B2771AB00779298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		417B0D111B2771AB00779298 /* Build configuration list for PBXNativeTarget "SAMortalKombatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417B0D121B2771AB00779298 /* Debug */,
+				417B0D131B2771AB00779298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 417B0CE31B2771AB00779298 /* Project object */;
+}
